@@ -1,0 +1,257 @@
+% ============================================================================
+% Korean Resume Template (한국형 이력서 템플릿)
+% Based on: changh95/latex_resume_template_kor (GitHub 398⭐)
+% Engine: XeLaTeX + kotex
+% Style: Single-column, dense layout with section separators
+% ============================================================================
+
+\documentclass[a4paper, 11pt]{article}
+
+% ============================================================================
+% PACKAGES
+% ============================================================================
+
+% --- Korean Support ---
+\usepackage{kotex}              % Hangul typography (auto-loads xetexko under XeLaTeX)
+\usepackage{fontspec}           % XeLaTeX font selection
+
+% --- Page Layout ---
+\usepackage[
+  a4paper,
+  top=15mm, bottom=15mm,
+  left=17mm, right=17mm
+]{geometry}
+
+% --- Typography & Sections ---
+\usepackage{titlesec}           % Section header styling
+\usepackage{enumitem}           % Compact list control
+
+% --- Tables ---
+\usepackage{tabularx}           % Auto-width columns for header/info
+\usepackage{array}              % Column type extensions
+
+% --- Colors & Links ---
+\usepackage{xcolor}             % Color definitions
+\usepackage[hidelinks]{hyperref}  % Clickable links (no colored boxes)
+
+% --- Miscellaneous ---
+\usepackage{fancyhdr}           % Header/footer control
+\usepackage{calc}               % Length arithmetic
+
+% ============================================================================
+% FONTS
+% ============================================================================
+
+\setmainfont{Malgun Gothic}[
+  Script = Hangul,
+  Language = Korean
+]
+
+\setmainhangulfont{Malgun Gothic}
+\setsanshangulfont{Malgun Gothic}
+
+% ============================================================================
+% PAGE SETUP
+% ============================================================================
+
+\geometry{a4paper, top=15mm, bottom=15mm, left=17mm, right=17mm}
+
+% Disable default page style
+\pagestyle{empty}
+
+% Compact spacing throughout
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\baselineskip}{1.1\baselineskip}
+
+% ============================================================================
+% COLORS
+% ============================================================================
+
+\definecolor{navy}{RGB}{31, 73, 125}        % Dark blue for accents
+\definecolor{darkgray}{RGB}{60, 60, 60}     % Dark gray for section headers
+
+% ============================================================================
+% SECTION FORMATTING (titlesec)
+% ============================================================================
+
+% Section: Bold title + full-width black line below
+\titleformat{\section}
+  {\color{darkgray}\large\bfseries}  % Format
+  {}                                 % Label (none)
+  {0pt}                              % Separation
+  {}                                 % Before
+  [\vspace{-2pt}\color{darkgray}\hrule\vspace{4pt}]  % After: thin line + spacing
+
+\titlespacing{\section}{0pt}{6pt plus 2pt minus 2pt}{4pt plus 1pt minus 1pt}
+
+% ============================================================================
+% LISTS
+% ============================================================================
+
+% Compact bullet lists
+\setlist[itemize]{
+  noitemsep,        % No extra space between items
+  topsep=0pt,       % No space above list
+  partopsep=0pt,    % No space if list is first in paragraph
+  leftmargin=12pt   % Minimal indentation
+}
+
+% ============================================================================
+% CUSTOM COMMANDS
+% ============================================================================
+
+% Header: Name + Contact Info (side-by-side in a table)
+\newcommand{\resumeHeader}[5]{%
+  \begin{center}
+    {\LARGE\bfseries #1}
+  \end{center}
+  \vspace{2pt}
+  \noindent
+  \begin{tabularx}{\textwidth}{X r}
+    & 전화: #2 \quad 이메일: \href{mailto:#3}{#3} \\
+    & 주소: #4 \quad 블로그: \href{#5}{#5}
+  \end{tabularx}
+  \vspace{6pt}
+}
+
+% Entry with Subheading (title + metadata on two lines)
+% Args: {org/school}{period}{position/major/role}{location/city}
+\newcommand{\resumeSubheading}[4]{%
+  \vspace{2pt}
+  \begin{tabularx}{\textwidth}{l r}
+    \textbf{#1} & \small #2 \\
+    #3 & \small #4 \\
+  \end{tabularx}
+  \vspace{2pt}
+}
+
+% Compact bullet item
+\newcommand{\resumeItem}[1]{%
+  \item \small #1
+}
+
+% Skill category + list (single line)
+\newcommand{\resumeSkill}[2]{%
+  \textbf{#1:} #2 \\
+}
+
+% ============================================================================
+% DOCUMENT START
+% ============================================================================
+
+\begin{document}
+
+% ============================================================================
+% HEADER: NAME + CONTACT
+% ============================================================================
+
+\resumeHeader
+  {조 동 휘}  % Name (with spacing)
+  {010-8699-1510}  % Phone
+  {donghwi0711@icloud.com}  % Email
+  {서울특별시 관악구 신림로 30길 17-19 (올리하우스) 306호}  % Address
+  {https://github.com/nobrain711}  % Blog/Portfolio URL
+
+% ============================================================================
+% SECTION: 학력사항 (Education)
+% ============================================================================
+
+\section{학력사항}
+
+\resumeSubheading
+  {영남이공대학교}
+  {2021.03 -- 2024.02}
+  {컴퓨터공학과 (학점: 3.75/4.5)}
+  {대구광역시}
+
+\resumeSubheading
+  {춘천기계공업고등학교}
+  {2016.03 -- 2019.02}
+  {특성화고등학교 자동차과(군특성화과)}
+  {강원도 춘천시}
+
+% ============================================================================
+% SECTION: 경력사항 (Work Experience)
+% ============================================================================
+
+\section{경력사항}
+
+\resumeSubheading
+  {(주)토마토 (일본 개발 인력 파견회사)}
+  {2024.04 -- 2025.01}
+  {소프트웨어 엔지니어}
+  {일본 도쿄도 시부야구}
+
+\begin{itemize}
+  \resumeItem{금융계 시스템 개발 담당 — AWS EC2 기반 클라우드 서버 및 온프레미스 물리 서버 환경 구축}
+  \resumeItem{Windows Server 19/21, Microsoft SQL Server 19/21 설치 및 환경 설정 (클라우드 \& 온프레미스 이중 구성)}
+  \resumeItem{Visual Studio 설치 작업 지시서(SOP) 작성 — 과거 버전 대비 명확성 개선으로 설치 시간 14\% 단축 달성}
+  \resumeItem{금융 시스템 운영 및 유지보수 경험 (6개월, 파견사원)}
+\end{itemize}
+
+% ============================================================================
+% SECTION: 기술스택 (Technical Skills)
+% ============================================================================
+
+\section{기술스택}
+
+\noindent
+\resumeSkill{프로그래밍 언어}{Python, JavaScript/TypeScript, SQL, Bash}
+
+\noindent
+\resumeSkill{웹 프레임워크}{FastAPI, Django, React, Express.js}
+
+\noindent
+\resumeSkill{데이터베이스}{PostgreSQL, MySQL, MongoDB, Redis}
+
+\noindent
+\resumeSkill{클라우드 \& DevOps}{AWS (EC2, S3, RDS), Docker, GitHub Actions, Kubernetes}
+
+\noindent
+\resumeSkill{개발 도구}{Git, VS Code, Postman, Jupyter Notebook}
+
+\noindent
+\resumeSkill{기타 라이브러리}{SQLAlchemy, Pydantic, NumPy, Pandas, Matplotlib}
+
+% ============================================================================
+% SECTION: 자격증 / 어학 (Certifications & Language)
+% ============================================================================
+
+\section{자격증 \& 어학}
+
+\begin{tabularx}{\textwidth}{l l l}
+  \textbf{자격증} & & \\
+  정보처리기사 & 한국산업인력공단 & 2021.11.26 \\
+  SQLD & 한국데이터산업진흥원 & 2022.04.15 \\
+  & & \\
+  \textbf{어학} & & \\
+  TOEIC & 920점 & 2023.05.14 \\
+  OPIc & IM2 & 2023.09.10 \\
+\end{tabularx}
+
+% ============================================================================
+% SECTION: 수상 / 활동 (Awards & Activities)
+% ============================================================================
+
+\section{수상 \& 활동}
+
+\resumeSubheading
+  {교내 프로그래밍 경진대회}
+  {2019.11}
+  {최우수상 (1위)}
+  {한국대학교}
+
+\resumeSubheading
+  {오픈소스 프로젝트 컨트리뷰션}
+  {2022.06 -- 현재}
+  {GitHub 저장소 기여 (40+ commits)}
+  {온라인}
+
+\resumeSubheading
+  {지역 IT 교육 봉사}
+  {2021.03 -- 2021.08}
+  {청소년 대상 코딩 교육 지도 (월 4회)}
+  {서울시 강남구}
+
+\end{document}

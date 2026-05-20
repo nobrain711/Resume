@@ -3,7 +3,11 @@
     "allow": [
       "Bash(git add *)",
       "Bash(git commit -m 'feat: add Claude Code orchestration, agents, and skills for resume workflow *)",
-      "Bash(git commit -m 'refactor: remove duplicate tech analyzer script *)"
+      "Bash(git commit -m 'refactor: remove duplicate tech analyzer script *)",
+      "Bash(xelatex resume_saramin.tex)",
+      "Bash(find d:/workspace -name \"*최수아*\" -o -name \"*이력서*\" | head -20)",
+      "Read(//d/workspace/**)",
+      "Bash(pdfinfo resume_saramin.pdf)"
     ]
   }
 }

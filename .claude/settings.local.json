@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git commit -m 'feat: add profile photo and remove dimension label *)"
+    ]
+  }
+}

@@ -7,7 +7,9 @@
       "Bash(xelatex resume_saramin.tex)",
       "Bash(find d:/workspace -name \"*최수아*\" -o -name \"*이력서*\" | head -20)",
       "Read(//d/workspace/**)",
-      "Bash(pdfinfo resume_saramin.pdf)"
+      "Bash(pdfinfo resume_saramin.pdf)",
+      "Bash(identify resume_korean.pdf)",
+      "PowerShell(Get-ChildItem resume_korean.pdf -ErrorAction SilentlyContinue | Select-Object Name, @{N='Size';E={$_.Length/1KB}}; [System.Diagnostics.FileVersionInfo]::GetVersionInfo\\(\"resume_korean.pdf\"\\).FileVersion)"
     ]
   }
 }

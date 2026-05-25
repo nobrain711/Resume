@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git commit -m 'feat: add profile photo and remove dimension label *)"
+      "Bash(git commit -m 'feat: add profile photo and remove dimension label *)",
+      "Bash(Get-Content -Path \"d:\\\\workspace\\\\00_doc\\\\00_resume\\\\TECH_STACK.md\" -Encoding UTF8)"
     ]
   }
 }

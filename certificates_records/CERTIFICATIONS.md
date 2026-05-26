@@ -3,26 +3,25 @@
 ## 🗣️ 어학 (Language Proficiency)
 
 ### JLPT N3
-- **기관**: 일본 정부 | **등급**: N3
+- **기관**: 일본 정부
+- **취득일**: 2023.01.12
+- **등급**: N3
 
 ![JLPT N3](../../images/certificates/N3.jpg)
-
-### JPT 565점
-- **기관**: YBM (영어능력평가) | **점수**: 565점
-
-![JPT 565](../../images/certificates/JPT_565.PNG)
 
 ---
 
 ## 💼 IT 자격증 (IT Certifications)
 
-### MOS (Microsoft Office Specialist)
+### MOS (Microsoft Office Specialist) - Excel
 - **기관**: Microsoft
+- **취득일**: 2021.06.04
 
 [View Certificate](../../images/certificates/mos.pdf)
 
 ### 빅데이터전문가 1급
-- **기관**: 한국데이터산업진흥원 | **취득일**: 2022.04.15
+- **기관**: 한국직업능력검정협회
+- **취득일**: 2021.06.08
 
 ![Big Data Specialist Certificate](../../images/certificates/빅데이터전문가%201급.jpg)
 

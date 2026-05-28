@@ -1,0 +1,242 @@
+% ============================================================================
+% English Resume Template with Profile Photo
+% Engine: XeLaTeX + fontspec
+% ============================================================================
+
+\documentclass[a4paper, 10pt]{article}
+
+% ============================================================================
+% PACKAGES
+% ============================================================================
+
+\usepackage{fontspec}
+\usepackage[a4paper, top=15mm, bottom=15mm, left=20mm, right=20mm]{geometry}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{calc}
+
+% ============================================================================
+% FONTS
+% ============================================================================
+
+\setmainfont{Calibri}
+
+% ============================================================================
+% PAGE SETUP
+% ============================================================================
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\baselineskip}{1.0\baselineskip}
+
+% ============================================================================
+% COLORS
+% ============================================================================
+
+\definecolor{darkgray}{RGB}{80, 80, 80}
+
+% ============================================================================
+% SECTION FORMATTING
+% ============================================================================
+
+\newcommand{\resumesection}[1]{%
+  \vspace{8pt}
+  \noindent
+  {\large\bfseries #1}
+  \vspace{2pt}
+  \noindent\hrule
+  \vspace{4pt}
+}
+
+% ============================================================================
+% DOCUMENT START
+% ============================================================================
+
+\begin{document}
+
+% ============================================================================
+% HEADER WITH NAME AND PHOTO
+% ============================================================================
+
+\begin{minipage}[t]{0.70\textwidth}
+  \vspace{0pt}
+  {\fontsize{32}{32}\selectfont\textbf{JO DONGHWI}}
+
+  \vspace{2pt}
+
+  {\large Software Engineer}
+
+  \vspace{4pt}
+  \noindent\hrule
+  \vspace{6pt}
+\end{minipage}
+\begin{minipage}[t]{0.28\textwidth}
+  \vspace{0pt}
+  \begin{center}
+    \includegraphics[width=3.2cm, height=4.2cm, keepaspectratio]{../images/profile/증명사진.jpg}
+  \end{center}
+\end{minipage}
+
+% ============================================================================
+% PERSONAL INFORMATION
+% ============================================================================
+
+\resumesection{Personal Information}
+
+\begin{tabularx}{\textwidth}{l X}
+  Date of Birth & August 10, 2000 (25 years old) \\
+  Address & 306 Olli House, 17-19 Shillim-ro 30-gil, Gwanak-gu, Seoul, Korea \\
+  Phone & +82-10-8699-1510 \\
+  Email & donghwi0711@icloud.com \\
+  GitHub & \href{https://github.com/nobrain711}{github.com/nobrain711} \\
+  Career & 1+ years (Software Engineer) \\
+\end{tabularx}
+
+% ============================================================================
+% EDUCATION
+% ============================================================================
+
+\resumesection{Education}
+
+\noindent
+\begin{tabularx}{\textwidth}{l X l l}
+  2021.03--2024.02 & Yeungnam University of Science \& Technology, Department of Computer Engineering & 3.75/4.5 & Graduated \\
+  2016.03--2019.02 & Chuncheon Machinery High School, Automotive Engineering & -- & Graduated \\
+\end{tabularx}
+
+% ============================================================================
+% WORK EXPERIENCE
+% ============================================================================
+
+\resumesection{Work Experience}
+
+\vspace{2pt}
+\noindent
+\textbf{Tomato Corp. \hfill 2024.04 -- 2025.01}
+
+\noindent
+\textbf{\quad Position: Software Engineer} \hfill Shibuya, Tokyo, Japan
+
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item Built AWS EC2 financial system infrastructure and configured Windows Server/SQL Server environments
+  \item Created Visual Studio installation SOP, achieving 14\% reduction in installation time
+\end{itemize}
+
+% ============================================================================
+% EDUCATION & TRAINING
+% ============================================================================
+
+\resumesection{Education \& Training}
+
+\vspace{2pt}
+\noindent
+\textbf{SK Networks Family AI Camp \hfill 2026.01.20--2026.07.16}
+
+\noindent
+{\small PlayData / Encore / SK Networks | AI Bootcamp focusing on LLM and RAG technologies (In Progress)}
+
+\vspace{3pt}
+\noindent
+\textbf{MLOps Course \hfill 2023.07.17--2023.08.11}
+
+\noindent
+{\small Northeast Region ICT | Machine Learning Development Logging and Deployment Management System}
+
+\vspace{3pt}
+\noindent
+\textbf{Practical Project Drone + AI Course \hfill 2021.06.26--2021.08.14}
+
+\noindent
+{\small Daegu AI HUB | Jetson Nano-based OpenCV Practice and AI Domain Convergence Learning}
+
+% ============================================================================
+% AWARDS & ACTIVITIES
+% ============================================================================
+
+\resumesection{Awards \& Activities}
+
+\vspace{2pt}
+\noindent
+\textbf{\underline{Awards}}
+
+\vspace{2pt}
+\noindent
+\textbf{2021}
+
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item Yeungnam University Startup Club Competition (Smart Helmet) — Grand Prize (2nd out of 14 teams)
+\end{itemize}
+
+\vspace{2pt}
+\noindent
+\textbf{2022}
+
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item Yeungnam University Startup Club Competition (Kiosk Education) — Encouragement Prize
+  \item Mandoroba Makerthon 2022 — Idea Award
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\textbf{\underline{Activities}}
+
+\vspace{2pt}
+\noindent
+\textbf{2021}
+
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item N.A.P (Networks Application Programming) — Major Club \& Startup Club (2021.03 -- 2022.12)
+  \item VR Education Specialized in Future Industries — 45-hour VR Bootcamp (Unreal Engine 4)
+\end{itemize}
+
+\vspace{2pt}
+\noindent
+\textbf{2022}
+
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item N.A.P (Networks Application Programming) — Major Club \& Startup Club (2021.03 -- 2022.12)
+  \item Smart City Project — Urban Problem Discovery Group (Proposed solutions for disabled taxi call system)
+\end{itemize}
+
+% ============================================================================
+% ADDITIONAL INFORMATION
+% ============================================================================
+
+\newpage
+
+\resumesection{Additional Information}
+
+\vspace{3pt}
+\noindent
+\textbf{Language Proficiency} \hfill JLPT (Japanese Language Proficiency Test) N3 (2023.01.12)
+
+\vspace{2pt}
+\noindent
+\textbf{Military Service} \hfill 2019.02 -- 2020.06 Early Discharge (Grade 5)
+
+\vspace{2pt}
+\noindent
+\textbf{Certifications}
+
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item MOS (Microsoft Office Specialist) - Excel \hfill Microsoft (2021.06.04)
+  \item Big Data Expert Level 1 \hfill Korea Vocational Qualification Association (2021.06.08)
+\end{itemize}
+
+\end{document}

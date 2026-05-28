@@ -1,52 +1,30 @@
 % ============================================================================
-% Korean Resume Template (한국형 이력서 템플릿)
-% Based on: changh95/latex_resume_template_kor (GitHub 398⭐)
+% Korean Resume Template with Profile Photo
+% Based on Sample.pdf - Saramin/JobKorea Standard Format
 % Engine: XeLaTeX + kotex
-% Style: Single-column, dense layout with section separators
 % ============================================================================
 
-\documentclass[a4paper, 11pt]{article}
+\documentclass[a4paper, 10pt]{article}
 
 % ============================================================================
 % PACKAGES
 % ============================================================================
 
-% --- Korean Support ---
-\usepackage{kotex}              % Hangul typography (auto-loads xetexko under XeLaTeX)
-\usepackage{fontspec}           % XeLaTeX font selection
-
-% --- Page Layout ---
-\usepackage[
-  a4paper,
-  top=15mm, bottom=15mm,
-  left=17mm, right=17mm
-]{geometry}
-
-% --- Typography & Sections ---
-\usepackage{titlesec}           % Section header styling
-\usepackage{enumitem}           % Compact list control
-
-% --- Tables ---
-\usepackage{tabularx}           % Auto-width columns for header/info
-\usepackage{array}              % Column type extensions
-
-% --- Colors & Links ---
-\usepackage{xcolor}             % Color definitions
-\usepackage[hidelinks]{hyperref}  % Clickable links (no colored boxes)
-
-% --- Miscellaneous ---
-\usepackage{fancyhdr}           % Header/footer control
-\usepackage{calc}               % Length arithmetic
+\usepackage{kotex}
+\usepackage{fontspec}
+\usepackage[a4paper, top=15mm, bottom=15mm, left=20mm, right=20mm]{geometry}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{calc}
 
 % ============================================================================
 % FONTS
 % ============================================================================
 
-\setmainfont{Malgun Gothic}[
-  Script = Hangul,
-  Language = Korean
-]
-
+\setmainfont{Malgun Gothic}[Script=Hangul, Language=Korean]
 \setmainhangulfont{Malgun Gothic}
 \setsanshangulfont{Malgun Gothic}
 
@@ -54,86 +32,28 @@
 % PAGE SETUP
 % ============================================================================
 
-\geometry{a4paper, top=15mm, bottom=15mm, left=17mm, right=17mm}
-
-% Disable default page style
 \pagestyle{empty}
-
-% Compact spacing throughout
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\setlength{\baselineskip}{1.1\baselineskip}
+\setlength{\baselineskip}{1.0\baselineskip}
 
 % ============================================================================
 % COLORS
 % ============================================================================
 
-\definecolor{navy}{RGB}{31, 73, 125}        % Dark blue for accents
-\definecolor{darkgray}{RGB}{60, 60, 60}     % Dark gray for section headers
+\definecolor{darkgray}{RGB}{80, 80, 80}
 
 % ============================================================================
-% SECTION FORMATTING (titlesec)
+% SECTION FORMATTING
 % ============================================================================
 
-% Section: Bold title + full-width black line below
-\titleformat{\section}
-  {\color{darkgray}\large\bfseries}  % Format
-  {}                                 % Label (none)
-  {0pt}                              % Separation
-  {}                                 % Before
-  [\vspace{-2pt}\color{darkgray}\hrule\vspace{4pt}]  % After: thin line + spacing
-
-\titlespacing{\section}{0pt}{6pt plus 2pt minus 2pt}{4pt plus 1pt minus 1pt}
-
-% ============================================================================
-% LISTS
-% ============================================================================
-
-% Compact bullet lists
-\setlist[itemize]{
-  noitemsep,        % No extra space between items
-  topsep=0pt,       % No space above list
-  partopsep=0pt,    % No space if list is first in paragraph
-  leftmargin=12pt   % Minimal indentation
-}
-
-% ============================================================================
-% CUSTOM COMMANDS
-% ============================================================================
-
-% Header: Name + Contact Info (side-by-side in a table)
-\newcommand{\resumeHeader}[5]{%
-  \begin{center}
-    {\LARGE\bfseries #1}
-  \end{center}
-  \vspace{2pt}
+\newcommand{\resumesection}[1]{%
+  \vspace{8pt}
   \noindent
-  \begin{tabularx}{\textwidth}{X r}
-    & 전화: #2 \quad 이메일: \href{mailto:#3}{#3} \\
-    & 주소: #4 \quad 블로그: \href{#5}{#5}
-  \end{tabularx}
-  \vspace{6pt}
-}
-
-% Entry with Subheading (title + metadata on two lines)
-% Args: {org/school}{period}{position/major/role}{location/city}
-\newcommand{\resumeSubheading}[4]{%
+  {\large\bfseries #1}
   \vspace{2pt}
-  \begin{tabularx}{\textwidth}{l r}
-    \textbf{#1} & \small #2 \\
-    #3 & \small #4 \\
-  \end{tabularx}
-  \vspace{2pt}
-}
-
-% Compact bullet item
-\newcommand{\resumeItem}[1]{%
-  \item \small #1
-}
-
-% Skill category + list (single line)
-\newcommand{\resumeSkill}[2]{%
-  \textbf{#1:} #2 \\
+  \noindent\hrule
+  \vspace{4pt}
 }
 
 % ============================================================================
@@ -143,109 +63,184 @@
 \begin{document}
 
 % ============================================================================
-% HEADER: NAME + CONTACT
+% HEADER WITH NAME AND PHOTO
 % ============================================================================
 
-\resumeHeader
-  {조 동 휘}  % Name (with spacing)
-  {010-8699-1510}  % Phone
-  {donghwi0711@icloud.com}  % Email
-  {서울특별시 관악구 신림로 30길 17-19 (올리하우스) 306호}  % Address
-  {https://github.com/nobrain711}  % Blog/Portfolio URL
+\begin{minipage}[t]{0.70\textwidth}
+  \vspace{0pt}
+  {\fontsize{32}{32}\selectfont\textbf{조\ 동\ 휘}}
+
+  \vspace{2pt}
+
+  {\large JO DONGHWI}
+
+  \vspace{4pt}
+  \noindent\hrule
+  \vspace{6pt}
+\end{minipage}
+\begin{minipage}[t]{0.28\textwidth}
+  \vspace{0pt}
+  \begin{center}
+    \includegraphics[width=3.2cm, height=4.2cm, keepaspectratio]{../images/profile/증명사진.jpg}
+  \end{center}
+\end{minipage}
 
 % ============================================================================
-% SECTION: 학력사항 (Education)
+% PERSONAL INFORMATION
 % ============================================================================
 
-\section{학력사항}
+\resumesection{인\ 적\ 사\ 항}
 
-\resumeSubheading
-  {영남이공대학교}
-  {2021.03 -- 2024.02}
-  {컴퓨터공학과 (학점: 3.75/4.5)}
-  {대구광역시}
-
-\resumeSubheading
-  {춘천기계공업고등학교}
-  {2016.03 -- 2019.02}
-  {특성화고등학교 자동차과(군특성화과)}
-  {강원도 춘천시}
-
-% ============================================================================
-% SECTION: 경력사항 (Work Experience)
-% ============================================================================
-
-\section{경력사항}
-
-\resumeSubheading
-  {(주)토마토 (일본 개발 인력 파견회사)}
-  {2024.04 -- 2025.01}
-  {소프트웨어 엔지니어}
-  {일본 도쿄도 시부야구}
-
-\begin{itemize}
-  \resumeItem{AWS EC2 금융 시스템 인프라 구축 및 Windows Server/SQL Server 환경 설정}
-  \resumeItem{Visual Studio 설치 SOP 작성으로 설치 시간 14\% 단축 달성}
-\end{itemize}
-
-\noindent
-\resumeSkill{기타 라이브러리}{SQLAlchemy, Pydantic, NumPy, Pandas, Matplotlib}
-
-% ============================================================================
-% SECTION: 교육 및 연수 (Training & Courses)
-% ============================================================================
-
-\section{교육 및 연수}
-
-\resumeSubheading
-  {SK 네트웍스 Family AI 캠프}
-  {2026.01 -- 2026.07}
-  {플레이데이터}
-  {온라인}
-
-% ============================================================================
-% SECTION: 자격증 / 어학 (Certifications & Language)
-% ============================================================================
-
-\section{자격증 \& 어학}
-
-\begin{tabularx}{\textwidth}{l l l}
-  \textbf{자격증} & & \\
-  MOS (Microsoft Office Specialist) - Excel & Microsoft & 2021.06.04 \\
-  빅데이터전문가 1급 & 한국직업능력검정협회 & 2021.06.08 \\
-  & & \\
-  \textbf{어학} & & \\
-  JLPT (일본어능력시험) & N3 & 2023.01.12 \\
+\begin{tabularx}{\textwidth}{l X}
+  생년월일 & 2000.08.10 (25세) \\
+  현 주 소 & 서울특별시 관악구 신림로 30길 17-19 (올리하우스) 306호 \\
+  연락처 & 010-8699-1510 \\
+  이메일 & donghwi0711@icloud.com \\
+  GitHub & \href{https://github.com/nobrain711}{github.com/nobrain711} \\
+  경력 & 1년 이상 (소프트웨어 개발자) \\
 \end{tabularx}
 
 % ============================================================================
-% SECTION: 수상 / 활동 (Awards & Activities)
+% EDUCATION
 % ============================================================================
 
-\section{수상 \& 활동}
+\resumesection{학\ 력\ 사\ 항}
 
-\resumeSubheading
-  {멋쟁이사자처럼 명지톤}
-  {2024.10}
-  {대상}
-  {멋쟁이사자처럼}
+\noindent
+\begin{tabularx}{\textwidth}{l X l l}
+  2021.03--2024.02 & 영남이공대학교 컴퓨터공학과 & 3.75/4.5 & 졸업 \\
+  2016.03--2019.02 & 춘천기계공업고등학교 자동차과 & -- & 졸업 \\
+\end{tabularx}
 
-\resumeSubheading
-  {2021 Denmark X CO.Ad AD Festival}
-  {2021.11}
-  {최우수상}
-  {동원 F\&B}
+% ============================================================================
+% WORK EXPERIENCE
+% ============================================================================
 
-\resumeSubheading
-  {멋쟁이사자처럼 at 명지대(서울)}
-  {2024.03 -- 2024.12}
-  {기술 멘토링 및 팀 프로젝트 참여}
-  {온라인}
+\resumesection{경\ 력\ 사\ 항}
 
-\resumeSubheading
-  {명지대 중앙 자전거 동아리 굴렁쇠}
-  {2023.03 -- 2026.02}
-  {동아리 활동}
-  {명지대학교}
+\vspace{2pt}
+\noindent
+\textbf{(주)토마토 \hfill 2024.04 -- 2025.01}
+
+\noindent
+\textbf{\quad 직위: 소프트웨어 엔지니어} \hfill 일본 도쿄도 시부야구
+
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item AWS EC2 금융 시스템 인프라 구축 및 Windows Server/SQL Server 환경 설정
+  \item Visual Studio 설치 SOP 작성으로 설치 시간 14\% 단축 달성
+\end{itemize}
+
+% ============================================================================
+% EDUCATION & TRAINING
+% ============================================================================
+
+\resumesection{교\ 육\ 및\ 연\ 수}
+
+\vspace{2pt}
+\noindent
+\textbf{SK Networks Family AI 캠프 \hfill 2026.01.20--2026.07.16}
+
+\noindent
+{\small PlayData / Encore / SK Networks | LLM 및 RAG 기술을 활용한 AI 부트캠프 (현재 진행 중)}
+
+\vspace{3pt}
+\noindent
+\textbf{MLOps 과정 \hfill 2023.07.17--2023.08.11}
+
+\noindent
+{\small 동북권 ICT | ML 개발 로깅 및 배포 관리 시스템 학습}
+
+\vspace{3pt}
+\noindent
+\textbf{실무프로젝트 드론+AI 과정 \hfill 2021.06.26--2021.08.14}
+
+\noindent
+{\small 대구 AI HUB | Jetson Nano 활용 OpenCV 실습 및 AI 도메인 융합 학습}
+
+% ============================================================================
+% AWARDS & ACTIVITIES
+% ============================================================================
+
+\resumesection{수\ 상\ 및\ 활\ 동}
+
+\vspace{2pt}
+\noindent
+\textbf{\underline{수상}}
+
+\vspace{2pt}
+\noindent
+\textbf{2021}
+
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item 영남이공대학교 창업동아리 경진대회 (스마트 헬멧) — 최우수상 (14개팀 중 2등)
+\end{itemize}
+
+\vspace{2pt}
+\noindent
+\textbf{2022}
+
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item 영남이공대학교 창업동아리 경진대회 (키오스크 교육) — 장려상
+  \item 맨드로바 메이커톤 2022 — 아이디어상
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\textbf{\underline{활동}}
+
+\vspace{2pt}
+\noindent
+\textbf{2021}
+
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item N.A.P (Networks Application Programming) — 전공 동아리 & 창업 동아리 (2021.03 -- 2022.12)
+  \item 미래산업 수요특화 VR 교육 — 45시간 VR 부트캠프 수료 (언리얼 엔진 4 활용)
+\end{itemize}
+
+\vspace{2pt}
+\noindent
+\textbf{2022}
+
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item N.A.P (Networks Application Programming) — 전공 동아리 & 창업 동아리 (2021.03 -- 2022.12)
+  \item 스마트시티 프로젝트 — 제대로리빙랩 도시문제발굴단 (장애인 콜택시 문제 해결방안 제시)
+\end{itemize}
+
+% ============================================================================
+% MISCELLANEOUS (Other Information)
+% ============================================================================
+
+\newpage
+
+\resumesection{기\ 타\ 사\ 항}
+
+\vspace{3pt}
+\noindent
+\textbf{언어 능력} \hfill JLPT (일본어능력시험) N3 (2023.01.12)
+
+\vspace{2pt}
+\noindent
+\textbf{병역 사항} \hfill 2019.02 -- 2020.06 의병전역 (5급)
+
+\vspace{2pt}
+\noindent
+\textbf{자격 사항}
+
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item MOS (Microsoft Office Specialist) - Excel \hfill Microsoft (2021.06.04)
+  \item 빅데이터전문가 1급 \hfill 한국직업능력검정협회 (2021.06.08)
+\end{itemize}
 
 \end{document}

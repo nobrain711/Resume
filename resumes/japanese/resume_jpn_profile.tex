@@ -1,0 +1,247 @@
+% ============================================================================
+% Japanese Resume Template with Profile Photo
+% Engine: XeLaTeX + fontspec
+% ============================================================================
+
+\documentclass[a4paper, 10pt]{article}
+
+% ============================================================================
+% PACKAGES
+% ============================================================================
+
+\usepackage{fontspec}
+\usepackage[a4paper, top=15mm, bottom=15mm, left=20mm, right=20mm]{geometry}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{calc}
+
+% ============================================================================
+% FONTS
+% ============================================================================
+
+\setmainfont{Calibri}
+\newfontfamily\japanesefont{Yu Gothic}
+
+% ============================================================================
+% PAGE SETUP
+% ============================================================================
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\baselineskip}{1.0\baselineskip}
+
+% ============================================================================
+% COLORS
+% ============================================================================
+
+\definecolor{darkgray}{RGB}{80, 80, 80}
+
+% ============================================================================
+% SECTION FORMATTING
+% ============================================================================
+
+\newcommand{\resumesection}[1]{%
+  \vspace{8pt}
+  \noindent
+  {\large\bfseries #1}
+  \vspace{2pt}
+  \noindent\hrule
+  \vspace{4pt}
+}
+
+% ============================================================================
+% DOCUMENT START
+% ============================================================================
+
+\begin{document}
+
+% ============================================================================
+% HEADER WITH NAME AND PHOTO
+% ============================================================================
+
+\begin{minipage}[t]{0.70\textwidth}
+  \vspace{0pt}
+  {\fontsize{32}{32}\selectfont\textbf{\japanesefont 曺東輝}}
+
+  \vspace{2pt}
+
+  {\large \japanesefont ジョ　ドンフィ}
+
+  \vspace{2pt}
+
+  {\small \japanesefont ソフトウェアエンジニア}
+
+  \vspace{4pt}
+  \noindent\hrule
+  \vspace{6pt}
+\end{minipage}
+\begin{minipage}[t]{0.28\textwidth}
+  \vspace{0pt}
+  \begin{center}
+    \includegraphics[width=3.2cm, height=4.2cm, keepaspectratio]{../../images/profile/증명사진.jpg}
+  \end{center}
+\end{minipage}
+
+% ============================================================================
+% PERSONAL INFORMATION
+% ============================================================================
+
+\resumesection{\japanesefont 個人情報}
+
+\begin{tabularx}{\textwidth}{l X}
+  \japanesefont 生年月日 & \japanesefont 2000年8月10日（25歳） \\
+  \japanesefont 住所 & \japanesefont 韓国ソウル市冠岳区新林路30キル 17-19 オリハウス 306号 \\
+  \japanesefont 電話 & +82-10-8699-1510 \\
+  \japanesefont メール & donghwi0711@icloud.com \\
+  GitHub & \href{https://github.com/nobrain711}{github.com/nobrain711} \\
+  \japanesefont キャリア & \japanesefont 1年以上（ソフトウェアエンジニア） \\
+\end{tabularx}
+
+% ============================================================================
+% EDUCATION
+% ============================================================================
+
+\resumesection{\japanesefont 学歴}
+
+\noindent
+\begin{tabularx}{\textwidth}{l X l l}
+  \japanesefont 2021.03--2024.02 & \japanesefont 英南工科大学 コンピュータ工学科 & 3.75/4.5 & \japanesefont 卒業 \\
+  \japanesefont 2016.03--2019.02 & \japanesefont 春川機械工業高校 自動車科 & -- & \japanesefont 卒業 \\
+\end{tabularx}
+
+% ============================================================================
+% WORK EXPERIENCE
+% ============================================================================
+
+\resumesection{\japanesefont 職務経歴}
+
+\vspace{2pt}
+\noindent
+\textbf{\japanesefont トマト社 \hfill 2024.04 -- 2025.01}
+
+\noindent
+\textbf{\quad \japanesefont 職位：ソフトウェアエンジニア} \hfill \japanesefont 日本 東京都渋谷区
+
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item \japanesefont AWS EC2金融システムインフラストラクチャの構築とWindows Server/SQL Server環境の設定
+  \item \japanesefont Visual Studio インストールSOP作成により、インストール時間を14\%短縮
+\end{itemize}
+
+% ============================================================================
+% EDUCATION & TRAINING
+% ============================================================================
+
+\resumesection{\japanesefont 教育・研修}
+
+\vspace{2pt}
+\noindent
+\textbf{\japanesefont SK Networks Family AI キャンプ \hfill 2026.01.20--2026.07.16}
+
+\noindent
+{\small \japanesefont PlayData / Encore / SK Networks | LLMおよびRAG技術を活用したAIブートキャンプ（進行中）}
+
+\vspace{3pt}
+\noindent
+\textbf{\japanesefont MLOps コース \hfill 2023.07.17--2023.08.11}
+
+\noindent
+{\small \japanesefont 東北ICT | 機械学習開発ログ管理およびデプロイメント管理システム学習}
+
+\vspace{3pt}
+\noindent
+\textbf{\japanesefont 実務プロジェクトドローン＋AIコース \hfill 2021.06.26--2021.08.14}
+
+\noindent
+{\small \japanesefont 大邱AI HUB | Jetson Nano を活用したOpenCV実習およびAIドメイン融合学習}
+
+% ============================================================================
+% AWARDS & ACTIVITIES
+% ============================================================================
+
+\resumesection{\japanesefont 受賞・活動}
+
+\vspace{2pt}
+\noindent
+\textbf{\underline{\japanesefont 受賞}}
+
+\vspace{2pt}
+\noindent
+\textbf{\japanesefont 2021年}
+
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item \japanesefont 英南工科大学起業サークル競技大会（スマートヘルメット）— グランプリ（14チーム中2位）
+\end{itemize}
+
+\vspace{2pt}
+\noindent
+\textbf{\japanesefont 2022年}
+
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item \japanesefont 英南工科大学起業サークル競技大会（キオスク教育）— 奨励賞
+  \item \japanesefont Mandoroba メイカーソン 2022 — アイデア賞
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\textbf{\underline{\japanesefont 活動}}
+
+\vspace{2pt}
+\noindent
+\textbf{\japanesefont 2021年}
+
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item \japanesefont N.A.P (Networks Application Programming) — 専攻サークル＆起業サークル（2021.03 -- 2022.12）
+  \item \japanesefont 未来産業需要特化VR教育 — 45時間VRブートキャンプ修了（Unreal Engine 4活用）
+\end{itemize}
+
+\vspace{2pt}
+\noindent
+\textbf{\japanesefont 2022年}
+
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item \japanesefont N.A.P (Networks Application Programming) — 専攻サークル＆起業サークル（2021.03 -- 2022.12）
+  \item \japanesefont スマートシティプロジェクト — 都市問題発掘団（障害者タクシー呼び出しシステムの改善案提示）
+\end{itemize}
+
+% ============================================================================
+% ADDITIONAL INFORMATION
+% ============================================================================
+
+\newpage
+
+\resumesection{\japanesefont その他情報}
+
+\vspace{3pt}
+\noindent
+\textbf{\japanesefont 言語能力} \hfill \japanesefont JLPT（日本語能力試験）N3 (2023.01.12)
+
+\vspace{2pt}
+\noindent
+\textbf{\japanesefont 兵役} \hfill \japanesefont 2019.02 -- 2020.06 早期除役（5級）
+
+\vspace{2pt}
+\noindent
+\textbf{\japanesefont 資格}
+
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \item \japanesefont MOS (Microsoft Office Specialist) - Excel \hfill Microsoft (2021.06.04)
+  \item \japanesefont ビッグデータスペシャリスト1級 \hfill \japanesefont 韓国職業能力検定協会 (2021.06.08)
+\end{itemize}
+
+\end{document}
